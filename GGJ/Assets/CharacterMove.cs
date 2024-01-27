@@ -23,16 +23,16 @@ public class CharacterMove : MonoBehaviour
     // キーボードの入力方向を取得
     var move = GetMove();
 
-      _animator.SetFloat("X", move.x);
-      _animator.SetFloat("Y", move.y);
-
     if (move != Vector2.zero)
     {
       // 入力されている場合はアニメーターに方向を設定
       _animator.SetBool("isMoving",true);
+      _animator.SetFloat("X", move.x);
+      _animator.SetFloat("Y", move.y);
 
       // 入力した方向に移動
       transform.Translate(move * 0.2f);
+    } else {
       _animator.SetBool("isMoving",false);
     }
     
