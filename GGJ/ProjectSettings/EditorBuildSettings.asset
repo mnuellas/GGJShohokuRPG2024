@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/start_screen.unity
+    guid: ec04028084345c749bbeb1ccc61172d7
+  - enabled: 1
+    path: Assets/Scenes/alice_crol.unity
+    guid: f5990524a036f5c468ff8006f80ee6fd
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 9be98f0392b752d4b92996625e43704a
   m_configObjects: {}
