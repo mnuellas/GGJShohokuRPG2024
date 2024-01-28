@@ -27,6 +27,8 @@ public class EnemyManagementScript : MonoBehaviour
     public GameObject EnemyObject;
     private EnemyScript enemyscript;
 
+    //最終スコア
+    public static int BattleScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -137,9 +139,20 @@ public class EnemyManagementScript : MonoBehaviour
         //勝った時に画像を変更する
         enemyscript = EnemyObject.GetComponent<EnemyScript>();
         enemyscript.ChangeImageScript();
+        Result("Win");
     }
 
     private void Lose(){
+        Result("Lose");
+    }
 
+    private void Result(string result){
+        
+        if(result == "Win"){
+            BattleScore = 100;
+        }else{
+            BattleScore = 10;
+        }
+        Debug.Log("LastScore："+BattleScore);
     }
 }
