@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Text : MoneBehaviour {
+public class Text : MonoBehaviour {
 
     //Use this for initialization
     void Start () {

@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class CharacterMove : MonoBehaviour
 {
   // あらかじめ Animator コンポーネントを持っておくようにする
-  private Animator _animator;
+  public Animator _animator;
   public float speed = 0.2f;
   public LayerMask interactableLayer;
 
@@ -37,8 +37,6 @@ public class CharacterMove : MonoBehaviour
     } else {
       _animator.SetBool("isMoving", false);
     }
-
-    Debug.Log(Keyboard.current.zKey.isPressed);
     if (Keyboard.current.zKey.isPressed) {
       interact();
     }
@@ -50,7 +48,7 @@ public class CharacterMove : MonoBehaviour
     var interactPs = transform.position + facingDir;
     var collider = Physics2D.OverlapCircle(interactPs, 6f, interactableLayer);
     Debug.DrawLine(transform.position, interactPs, Color.red, 1f);
-    Debug.Log(interactPs);
+    Debug.Log(collider);
     if (collider != null) {
       collider.GetComponent<Interactable>()?.Interact();
     }

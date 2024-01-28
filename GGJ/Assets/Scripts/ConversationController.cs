@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ConversationController : MonoBehaviour, Interactable
 {
+    [SerializeField] Dialog dialog;
+    [SerializeField] bool[] turn;
     public void Interact() {
-        Debug.Log("cc");
-
+        StartCoroutine(DialogManager.Instance.ShowDialog(dialog, turn));
     }
 }
