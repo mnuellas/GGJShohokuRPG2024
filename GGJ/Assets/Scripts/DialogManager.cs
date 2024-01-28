@@ -66,11 +66,11 @@ public class DialogManager : MonoBehaviour
     public IEnumerator TypeDialog(string line, bool turn)
     {
         if(turn) {
-            MCSprite.GetComponent<Image>().color = new Color32(82, 83, 84, 100);
-            Kamisprite.GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+            MCSprite.GetComponent<Image>().color = new Color32(82, 83, 84, 255);
+            Kamisprite.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         } else {
-            Kamisprite.GetComponent<Image>().color = new Color32(82, 83, 84, 100);
-            MCSprite.GetComponent<Image>().color = new Color32(255, 255, 255, 100);
+            Kamisprite.GetComponent<Image>().color = new Color32(82, 83, 84, 255);
+            MCSprite.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         }
         isTyping = true;
         text.text = "";
