@@ -284,14 +284,14 @@ RectTransform:
   m_GameObject: {fileID: 587138669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8749, y: 1.8749, z: 1.8749}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189550777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.6222, y: -78.7}
+  m_AnchoredPosition: {x: -7.0509, y: -217}
   m_SizeDelta: {x: 223.2444, y: 97.0657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &587138671
@@ -425,7 +425,7 @@ RectTransform:
   m_GameObject: {fileID: 631044834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8749, y: 1.8749, z: 1.8749}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1540389271}
@@ -433,7 +433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7, y: -89.3}
+  m_AnchoredPosition: {x: 5.9275026, y: -236.8701}
   m_SizeDelta: {x: 160, y: 35.4114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631044836
@@ -770,14 +770,14 @@ RectTransform:
   m_GameObject: {fileID: 1229882045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8749, y: 1.8749, z: 1.8749}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189550777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.5, y: -155.54}
+  m_AnchoredPosition: {x: -18.071, y: -361.06}
   m_SizeDelta: {x: 223.2444, y: 97.0657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229882047
@@ -843,7 +843,7 @@ RectTransform:
   m_GameObject: {fileID: 1334511230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8749, y: 1.8749, z: 1.8749}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 434846581}
@@ -851,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.7, y: -168.1}
+  m_AnchoredPosition: {x: 5.9275, y: -384.61}
   m_SizeDelta: {x: 160, y: 35.4114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1334511232
@@ -1109,14 +1109,14 @@ RectTransform:
   m_GameObject: {fileID: 1709987262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3536, y: 1.6243201, z: 1.3536}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189550777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 39}
+  m_AnchoredPosition: {x: 2, y: 12.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709987264
@@ -1243,7 +1243,7 @@ RectTransform:
   m_GameObject: {fileID: 1710698218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0748, y: 2.10125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189550777}
@@ -1315,14 +1315,14 @@ RectTransform:
   m_GameObject: {fileID: 1916999563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8580501, y: 1.8735338, z: 1.2387}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1189550777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 116}
+  m_AnchoredPosition: {x: 2, y: 234.5}
   m_SizeDelta: {x: 247.5555, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1916999565

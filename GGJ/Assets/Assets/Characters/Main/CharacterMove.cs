@@ -6,9 +6,10 @@ public class CharacterMove : MonoBehaviour
   // あらかじめ Animator コンポーネントを持っておくようにする
   private Animator _animator;
   public float speed = 0.2f;
+  public LayerMask interactableLayer;
 
   // 最初のフレーム更新の前に開始が呼び出されます
-  void Start()
+  void Awake()
   {
     // オブジェクトに紐付いている Animator を取得する
     _animator = GetComponent<Animator>();
@@ -36,7 +37,23 @@ public class CharacterMove : MonoBehaviour
     } else {
       _animator.SetBool("isMoving", false);
     }
+
+    Debug.Log(Keyboard.current.zKey.isPressed);
+    if (Keyboard.current.zKey.isPressed) {
+      interact();
+    }
     
+  }
+
+  void interact() {
+    var facingDir = new Vector3(_animator.GetFloat("X"), _animator.GetFloat("Y"));
+    var interactPs = transform.position + facingDir;
+    var collider = Physics2D.OverlapCircle(interactPs, 6f, interactableLayer);
+    Debug.DrawLine(transform.position, interactPs, Color.red, 1f);
+    Debug.Log(interactPs);
+    if (collider != null) {
+      Debug.Log("yop");
+    }
   }
 
   /// <summary>キーボード入力による移動方向を取得します。</summary>
