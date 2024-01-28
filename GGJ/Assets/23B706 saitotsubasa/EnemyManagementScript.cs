@@ -105,6 +105,19 @@ public class EnemyManagementScript : MonoBehaviour
                 Debug.Log("GiftOut");
                 OutPointAttack(nomalDamage);
             }
+            //メガネ編
+        }else if(property == "Megane"){
+            Debug.Log("Gift2Attack");
+            if(property == effectiveAction){
+                Debug.Log("GiftGood");
+                HiPointAttack(nomalDamage);
+            } else if(property == nomalAction){
+                Debug.Log("GiftNomal");
+                NomalPointAttack(nomalDamage);
+            } else if(property == badAction){
+                Debug.Log("GiftOut");
+                OutPointAttack(nomalDamage);
+            }
         }else{
             //どれにも当てはまらない時の処理
             //「何かするとしたら興味がないようだ」とかでいいと思う
@@ -154,7 +167,7 @@ public class EnemyManagementScript : MonoBehaviour
         } else {
             BattleScore = 10;
         }
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         Debug.Log("LastScore："+BattleScore);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscapeScript : MonoBehaviour
 {
@@ -9,5 +10,6 @@ public class EscapeScript : MonoBehaviour
     public void OnClick()
     {
         Debug.Log("Escape!");
+        SceneManager.LoadScene(1);
     }
 }

@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
         Joke,
         FunnyFace,
         Gift,
+        Megane,
     }
     //好み
     public Action effectiveAction;
