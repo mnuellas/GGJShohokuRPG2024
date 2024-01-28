@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class CharacterMove : MonoBehaviour
   }
 
   /// <summary>一定時間ごとに呼ばれるメソッドです。</summary>
-  void FixedUpdate()
+  public void HandleUpdate()
   {
     // キーボードの入力方向を取得
     var move = GetMove();
@@ -53,7 +52,7 @@ public class CharacterMove : MonoBehaviour
     Debug.DrawLine(transform.position, interactPs, Color.red, 1f);
     Debug.Log(interactPs);
     if (collider != null) {
-      SceneManager.LoadScene(2);
+      collider.GetComponent<Interactable>()?.Interact();
     }
   }
 
