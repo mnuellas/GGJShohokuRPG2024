@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharacterMove : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class CharacterMove : MonoBehaviour
     Debug.DrawLine(transform.position, interactPs, Color.red, 1f);
     Debug.Log(interactPs);
     if (collider != null) {
-      Debug.Log("yop");
+      SceneManager.LoadScene(2);
     }
   }
 

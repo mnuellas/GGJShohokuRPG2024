@@ -50,12 +50,6 @@ public class EnemyScript : MonoBehaviour
         Debug.Log(LowCorrection+" "+nomalCorrection+" "+directCorrection+effectiveAction+nomalAction+badAction);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ChangeImageScript(){
         Debug.Log("ChangeImg");
         NowSprite.sprite = ClearedSprite;

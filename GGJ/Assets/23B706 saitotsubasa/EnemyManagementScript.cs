@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyManagementScript : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class EnemyManagementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Proparty"+LowCorrection+" "+NomalCorrection+" "+DirectCorrection+" "+effectiveAction +nomalAction+ badAction +" " +maxHealth + " " +StartHealth);
+        Debug.Log("property"+LowCorrection+" "+NomalCorrection+" "+DirectCorrection+" "+effectiveAction +nomalAction+ badAction +" " +maxHealth + " " +StartHealth);
         HealthSlider.value = (float)StartHealth/(float)maxHealth;;
         NowHealth=StartHealth;
     }
@@ -51,56 +52,56 @@ public class EnemyManagementScript : MonoBehaviour
         }
     }
 
-    public void HealthCalculation(float nomalDamage,string proparty){
+    public void HealthCalculation(float nomalDamage,string property){
         Debug.Log("EnemyAttack");
         //ジョーク編
-        if(proparty == "Joke" ){
-            if(proparty == effectiveAction){
+        if(property == "Joke" ){
+            if(property == effectiveAction){
                 Debug.Log("JokeGood");
                 HiPointAttack(nomalDamage);
-            }else if(proparty == nomalAction){
+            }else if(property == nomalAction){
                 Debug.Log("JokeNomal");
                 NomalPointAttack(nomalDamage);
-            }else if(proparty == badAction){
+            }else if(property == badAction){
                 Debug.Log("JokeOut");
                 OutPointAttack(nomalDamage);
             }
         //ダンス編
-        }else if(proparty == "Dance"){
+        }else if(property == "Dance"){
             Debug.Log("Attack2Dance");
-            if(proparty == effectiveAction){
+            if(property == effectiveAction){
                 Debug.Log("DanceGood");
                 HiPointAttack(nomalDamage);
-            }else if(proparty == nomalAction){
+            }else if(property == nomalAction){
                 Debug.Log("DanceNomal");
                 NomalPointAttack(nomalDamage);
-            }else if(proparty == badAction){
+            }else if(property == badAction){
                 Debug.Log("DanceOut");
                 OutPointAttack(nomalDamage);
             }
         //変顔編
-        }else if(proparty == "FunnyFace"){
+        }else if(property == "FunnyFace"){
             Debug.Log("FunnyFace2Attack");
-            if(proparty == effectiveAction){
+            if(property == effectiveAction){
                 Debug.Log("FunnyFaceGood");
                 HiPointAttack(nomalDamage);
-            }else if(proparty == nomalAction){
+            }else if(property == nomalAction){
                 Debug.Log("FunnyFaceNomal");
                 NomalPointAttack(nomalDamage);
-            }else if(proparty == badAction){
+            }else if(property == badAction){
                 Debug.Log("FunnyFaceOut");
                 OutPointAttack(nomalDamage);
             }
         //ギフト編
-        }else if(proparty == "Gift"){
+        }else if(property == "Gift"){
             Debug.Log("Gift2Attack");
-            if(proparty == effectiveAction){
+            if(property == effectiveAction){
                 Debug.Log("GiftGood");
                 HiPointAttack(nomalDamage);
-            }else if(proparty == nomalAction){
+            } else if(property == nomalAction){
                 Debug.Log("GiftNomal");
                 NomalPointAttack(nomalDamage);
-            }else if(proparty == badAction){
+            } else if(property == badAction){
                 Debug.Log("GiftOut");
                 OutPointAttack(nomalDamage);
             }
@@ -139,20 +140,21 @@ public class EnemyManagementScript : MonoBehaviour
         //勝った時に画像を変更する
         enemyscript = EnemyObject.GetComponent<EnemyScript>();
         enemyscript.ChangeImageScript();
-        Result("Win");
+        FinishBattle(true);
     }
 
     private void Lose(){
-        Result("Lose");
+        FinishBattle(false);
     }
 
-    private void Result(string result){
+    private void FinishBattle(bool won){
         
-        if(result == "Win"){
+        if (won) {
             BattleScore = 100;
-        }else{
+        } else {
             BattleScore = 10;
         }
+        SceneManager.LoadScene(2);
         Debug.Log("LastScore："+BattleScore);
     }
 }
