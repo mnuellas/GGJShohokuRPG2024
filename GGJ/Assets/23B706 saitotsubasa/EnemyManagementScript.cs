@@ -41,7 +41,8 @@ public class EnemyManagementScript : MonoBehaviour
         HealthSlider.value = (float)NowHealth/(float)maxHealth;;
 
         //ここで負けた時と買った時の処理をしたい
-        if(NowHealth>=maxHealth){
+        if(NowHealth >= maxHealth){
+            Debug.Log("YOU WIN!");
             Win();
         }else if(NowHealth<=0){
             Lose();
@@ -101,6 +102,9 @@ public class EnemyManagementScript : MonoBehaviour
                 Debug.Log("GiftOut");
                 OutPointAttack(nomalDamage);
             }
+        }else{
+            //どれにも当てはまらない時の処理
+            //「何かするとしたら興味がないようだ」とかでいいと思う
         }
     }
 
@@ -130,8 +134,9 @@ public class EnemyManagementScript : MonoBehaviour
     }
 
     private void Win(){
+        //勝った時に画像を変更する
         enemyscript = EnemyObject.GetComponent<EnemyScript>();
-        enemyscript.ChangeCanvasScript();
+        enemyscript.ChangeImageScript();
     }
 
     private void Lose(){

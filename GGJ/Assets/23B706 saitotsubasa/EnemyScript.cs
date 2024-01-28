@@ -7,7 +7,6 @@ public class EnemyScript : MonoBehaviour
 {
     public GameObject EnemyManager;
     private EnemyManagementScript EnemyManagement;
-
     //初期HPの計算
     public int StartHealth = 0;
     public int maxHealth = 150;
@@ -16,14 +15,20 @@ public class EnemyScript : MonoBehaviour
     public float nomalCorrection = 1.0f;
     public float directCorrection = 2.0f;
 
+    public enum Action{
+        Dance,
+        Joke,
+        FunnyFace,
+        Gift,
+    }
     //好み
-    public string effectiveAction;
-    public string nomalAction;
-    public string badAction;
+    public Action effectiveAction;
+    public Action nomalAction;
+    public Action badAction;
 
     //画像関連のもの
     public Sprite ClearedSprite;
-    private SpriteRenderer image;
+    public SpriteRenderer NowSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +41,9 @@ public class EnemyScript : MonoBehaviour
         EnemyManagement.StartHealth = StartHealth;
         EnemyManagement.maxHealth =maxHealth;
         //好み
-        EnemyManagement.effectiveAction = effectiveAction;
-        EnemyManagement.nomalAction = nomalAction;
-        EnemyManagement.badAction = badAction;
+        EnemyManagement.effectiveAction = effectiveAction.ToString();
+        EnemyManagement.nomalAction = nomalAction.ToString();
+        EnemyManagement.badAction = badAction.ToString();
 
         EnemyManagement.EnemyObject = gameObject;
         //状態
@@ -51,8 +56,8 @@ public class EnemyScript : MonoBehaviour
         
     }
 
-    public void ChangeCanvasScript(){
-        image = gameObject.GetComponent<SpriteRenderer>();
-        image.sprite = ClearedSprite;
+    public void ChangeImageScript(){
+        Debug.Log("ChangeImg");
+        NowSprite.sprite = ClearedSprite;
     }
 }
